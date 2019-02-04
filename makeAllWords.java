@@ -12,8 +12,13 @@ public class makeAllWords{
       ans.add(s);
     } else {
       for (int i = 0; i < maxLetter; i++){
-        makeAllWords(k - 1, maxLetter, (char)('a' + 1) + s, ans);
+        makeAllWords(k - 1, maxLetter, (char)('a' + i) + s, ans);
       }
     }
+  }
+  public static void main(String[] args){
+    System.out.println(makeAllWords(3, 3));
+    System.out.println(makeAllWords(1, 26));
+    System.out.println(makeAllWords(2, 5));
   }
 }
